@@ -1,0 +1,46 @@
+@import '../../Theme.scss';
+
+.pp_checkbox{
+    appearance: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $c-grey-dark;
+    border-radius: 6px;
+    transition: all ease-in-out 0.2s;
+    background-image: url('./Assets/plus.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    //iPad Mini has deafult black color for checkbox, to remove it we are clearing background color
+    background-color: transparent;
+
+    &:checked {
+      background-image: url('./Assets//TickMarkWhite.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      // background-color: $rg-clay-orange-2;
+      background-color: $c-checkbox-blue;
+      border: none;
+    }
+}
+
+.partialSelection{
+  // border-color: $rg-clay-orange;
+  border-color: $c-checkbox-blue;
+}
+
+.disabledCheckbox{
+    opacity: 0.3;
+    cursor: unset;
+}
+
+.enabledCheckbox{
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    .checkbox:checked {
+      background-image: url('./Assets/TickMark.svg');
+    }
+}
