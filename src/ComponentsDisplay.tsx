@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CheckBox } from './Components/index'
+import { CheckBox, DropDown } from './Components/index'
 
 const ComponentsDisplay = () => {
     const [checkbox, setcheckbox] = useState(false);
@@ -13,6 +13,16 @@ const ComponentsDisplay = () => {
                     console.log('Checkbox OnChange Function')
                     setcheckbox(!checkbox)
                 }}
+            />
+            <DropDown
+            dropdownList={[
+                {value: '1', label:'Ram'},
+                {value: '2', label:'Shyaam'},
+                {value: '3', label:'Gopal'}
+            ]}
+            dropdownFunction={
+                (value, label) => console.log(value, label)
+            }
             />
         </div>
     )
